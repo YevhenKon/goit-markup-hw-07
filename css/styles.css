@@ -30,6 +30,10 @@ body {
     list-style: none;
 }
 
+.hide-title {
+    display: none;
+}
+
 /* page header */
 
 .header {
@@ -168,13 +172,11 @@ margin-right: 51px;
     background-size: cover;
     background-position: center;
     background: #C4C4C4;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img14.jpg");
-   
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img14.jpg");  
     padding: 200px 0;
-
 }
 
-.hero-title {
+.hero__title {
     margin-bottom: 30px;
     margin-top: 0;
     color: var(--secondary-text-color);
@@ -187,7 +189,7 @@ margin-right: 51px;
     text-align: center;
 }
 
-.button.primary {
+.hero__button {
     border-radius: 4px;
     border: none;
     padding: 10px 32px;
@@ -196,55 +198,74 @@ margin-right: 51px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    /* display: flex;
-    align-items: center;
-    text-align: center; */
     letter-spacing: 0.06em;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     display: block;
     margin: 0 auto;
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
 
-.button.primary:hover,
-.button.primary:focus {
+.hero__button:hover,
+.hero__button:focus {
     background-color: #188CE8;
 }
 
-.button.secondary {
-    border-radius: 4px;
-    padding: 6px 22px;
-    color: var(--secondary-text-color);
-    background-color: var(--accent-color);
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    color: var(--title-text-color);
+/* benefits */
+
+.benefits {
+    padding-top: 94px;
+    padding-bottom: 47px;
+}
+
+.benefits-set {
+    display: flex;
+}
+
+.benefits-set__item {
+    width: 270px;
+}
+
+.benefits-set__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.benefits-set__bgc {
     background-color: var(--background-button-color);
-    cursor: pointer;
-    text-align: center;
-    border: none;
-    height: 38px;
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.button.secondary:hover,
-.button.secondary:focus {
-    color: var(--secondary-text-color);
-    background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+.benefits-set__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
 }
 
-/* section */
+.benefits-set__text {
+    font-size: 14px;
+    line-height: 1.71;
+    margin: 0; 
+}
 
-.section {
+/* .section {
     padding: 94px 0;
+} */
+
+/* work */
+
+.work {
+    padding-top: 47px;
+    padding-bottom: 94px;
 }
 
 .section-title {
@@ -257,98 +278,40 @@ margin-right: 51px;
     text-align: center;
 }
 
-/* features */
-
-.feature-bgc {
-    background-color: var(--background-button-color);
-    border-radius: 4px;
-    margin-bottom: 30px;
-    width: 270px;
-    height: 120px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.feature-section {
-    padding-top: 94px;
-    padding-bottom: 47px;
-}
-
-.feature-list {
-    display: flex;
-}
-
-.feature-list .item {
- width: 270px;  
-}
-
-.feature-list .item:not(:last-child) {
-    margin-right: 30px;
-}
-
-.feature-list .title {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-}
-
-.feature-list .text {
-    font-size: 14px;
-    line-height: 1.71;
-    margin: 0; 
-}
-
-/* our work */
-
-.work-section {
-    padding-top: 47px;
-    padding-bottom: 94px;
-}
-
-.image {
-    display: block;
-}
-
-.work-list {
+.work-card {
     display: flex;
     flex-wrap: wrap;
 }
 
-.work-list .item {
+.work-card__item {
     width: 370px;
     position: relative;
     display: flex;
 }
 
-.work-list .item:not(:last-child) {
+.work-card__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.work-name {
+.work-card__bg {
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+.work-card__text {
     width: 100%;
     height: 16px;
     text-align: center;
     color: var(--secondary-text-color);
     font-weight: 700;
-    /* line-height: 1.14px; */
     text-transform: uppercase;
     font-size: 14px;
     margin: 0;
-}
-
-.box-name {
-position: absolute;
-background: rgba(47, 48, 58, 0.8);
-width: 100%;
-height: 70px;
-bottom: 0;
-padding-top: 27px;
-padding-bottom: 27px;
 }
 
 /* team */
@@ -644,6 +607,33 @@ cursor: pointer;
 
 /* portfolio list */
 
+.button.secondary {
+    border-radius: 4px;
+    padding: 6px 22px;
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    color: var(--title-text-color);
+    background-color: var(--background-button-color);
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    height: 38px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .product-thumb {
     position: relative;
     overflow: hidden;
@@ -700,10 +690,6 @@ cursor: pointer;
 
 .portfolio-category .title {
     margin-bottom: 4px;
-}
-
-.hide {
-    display: none;
 }
 
 .portfolio-button-list {
