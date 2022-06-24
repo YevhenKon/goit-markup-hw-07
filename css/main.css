@@ -633,4 +633,16 @@ body {
 .clients-list__link:focus {
   color: #2196F3;
   border-color: #2196F3;
+}
+
+.footer {
+  background-color: #2F303A;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 0;
+}
+
+.container.base {
+  display: flex;
+  align-items: baseline;
 }/*# sourceMappingURL=main.css.map */
