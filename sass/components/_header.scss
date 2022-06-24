@@ -38,9 +38,7 @@
 .menu__link {
     display: block;
         padding: 32px 0;
-    
-        color: var(--title-text-color);
-    
+        color: $title-text-color;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.1;
