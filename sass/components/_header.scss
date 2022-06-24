@@ -3,7 +3,6 @@
     border-bottom: 1px solid #ECECEC;
     margin-left: auto;
     margin-right: auto;
-    height: auto;
 }
 .header__box {
     display: flex;
@@ -30,7 +29,7 @@
 }
 .menu {
     display: flex;
-    margin-left: 93px;
+    margin: 0 0 0 93px;
 }
 
 .menu__item:not(:last-child) {
@@ -73,7 +72,8 @@
 }
 .contacts {
     display: flex;
-        margin-left: auto;
+    margin:0 0 0 auto;
+        
 }
 .contacts__item:not(:last-child) {
     margin-right: 50px;
